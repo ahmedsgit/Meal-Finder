@@ -123,12 +123,115 @@ button {
     width: 100%;
 }
 
+/* Single meal */
+.single-meal {
+    margin: 70px auto 30px auto;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-@media (max-width:800px) {}
+.single-meal h2 {
+    font-family: 'Architects Daughter', cursive, 'Lato', sans-serif;
+    font-size: 200%;
+    border: 5px #fff double;
+    width: auto;
+    padding: 5px 10px;
+}
 
-@media (max-width:700px) {}
+.single-meal img {
+    width: 300px;
+    margin: 0 15px 15px;
+    border: 3px solid #ffe6ea;
+    border-radius: 5px;
+}
+
+.single-meal-info {
+    margin: 20px;
+    padding: 20px 100px;
+    border: 2px #ffaf1a dashed;
+    border-radius: 5px;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.meal-instruction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.meal-instruction h3 {
+    font-size: 170%;
+    font-family: 'Architects Daughter', cursive;
+    margin-bottom: 0;
+    border: 2px #fff;
+    border-style: dotted double;
+    border-radius: 5px;
+    padding: 5px 8px;
+    width: auto;
+}
+
+.meal-instruction p {
+    border: 2px #fff groove;
+    text-align: left;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.single-meal ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.single-meal ul li {
+    border: 1px solid #ededed;
+    border-radius: 5px;
+    background-color: #fff;
+    display: inline-block;
+    color: rgba(17, 67, 87, 0.7);
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Lato', verdana;
+    padding: 10px 15px;
+    margin: 5px;
+
+}
+
+@media (max-width:800px) {
+    .meals {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width:700px) {
+    .meals {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .meal {
+        height: 200px;
+        width: 200px;
+    }
+}
 
 @media (max-width:500px) {
+    .meals {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .meal {
+        height: 300px;
+        width: 300px;
+    }
+
+    .single-meal img {
+        width: 400px;
+    }
+
     input[type=text] {
         width: 100%;
     }
