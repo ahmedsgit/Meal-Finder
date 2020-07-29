@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Engagement&family=Lato&family=Ribeye+Marrow&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #114357;
+    background: -webkit-linear-gradient(to right, #F29492, #114357);
+    background: linear-gradient(to right, #F29492, #114357);
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    margin: 0;
+}
+
+.container {
+    margin: auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container h1 {
+    font-family: 'Ribeye Marrow', cursive, Verdana, sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+input,
+button {
+    border: 1px solid #dedede;
+    font-size: 14px;
+    padding: 8px 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+button:focus,
+input:focus {
+    outline: none;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+input[type=text] {
+    width: 300px;
+}
+
+button {
+    color: #fff;
+}
+
+.search-btn {
+    border-radius: 0;
+    border-left: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: linear-gradient(to right, rgba(242, 148, 146, 0.7), rgba(17, 67, 87, 0.7));
+}
+
+.random-btn {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    background: linear-gradient(to left, rgba(242, 148, 146, 0.7), rgba(17, 67, 87, 0.7));
+}
+
+/* Result Head */
+.result-heading {
+    font-family: 'Lato', verdana;
+}
+
+.meals {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+
+.meal {
+    cursor: pointer;
+    position: relative;
+    height: 180px;
+    width: 180px;
+    text-align: center;
+    border: 3px solid #ffe6ea;
+    border-radius: 5px;
+}
+
+.meal-info {
+    position: absolute;
+    font-family: 'Architects Daughter', cursive;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(17, 67, 87, 0.7);
+    background: linear-gradient(to right, rgba(242, 148, 146, 0.7), rgba(17, 67, 87, 0.7));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+    color: #fff;
+}
+
+.meal:hover .meal-info {
+    opacity: 1;
+}
+
+.meal img {
+    height: 100%;
+    width: 100%;
+}
+
+
+@media (max-width:800px) {}
+
+@media (max-width:700px) {}
+
+@media (max-width:500px) {
+    input[type=text] {
+        width: 100%;
+    }
+}
