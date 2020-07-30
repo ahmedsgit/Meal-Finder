@@ -5,6 +5,21 @@ const resultHeading = document.getElementById('result-heading');
 const meals = document.getElementById('meals');
 const singleMeal = document.getElementById('single-meal');
 
+// Search Auto Recommand
+function searchAutoComplete(searchText) {
+    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${searchText}`)
+        .then(response => response.json())
+        .then(data => {
+            let dataArr = new Array();
+            for (let i = 0; i < data.meals.length; i++) {
+                dataArr.push(data.meals[i].strMeal);
+            }
+            console.log(dataArr);
+        })
+        .catch(() => console.error('No Match !'));
+    dataArr = '';
+}
+
 
 // Search meals Fetch form API
 function searchMeal(e) {
@@ -118,4 +133,8 @@ meals.addEventListener('click', e => {
         getMealById(mealId);
     }
 
+})
+
+search.addEventListener('input', () => {
+    searchAutoComplete(search.value);
 })
